@@ -140,8 +140,69 @@ return 'Customer has remaining Rs.'+this.price +' after buying the android phone
 
 IPhone class should extend the SmartPhone class and add two methods to it: displayFeatures(), and remainingAmount(priceIHave).
 
-### Progression 4:  MOBILE CAMPUS
+**class**
+- should receive four arguments seriesName, ram, batteryPower, price.
+- should receive seriesName as first argument.
+- should receive ram as second argument.
+- should receive batteryPower as third argument.
+- shoud receive price as the fourth argument
+- ram, batteryPower and price should be invoked from SmartPhone class. To invoke the parent class constructor you should use **super** keyword.
+```
+  constructor(seriesName, ram, batteryPower, price) {
+        super(ram, batteryPower, price)
+        this.seriesName = seriesName;
+    }
+```
 
+**displayFeatures()**
+- should be a method.
+- should receive 0 arguments.
+- should display the features of the smartphone as given below.
+```
+   return this.seriesName +'\n' + this.ram +'\n'+ this.batteryPower +'\n'+ this.price;
+```
+
+**remainingAmount(priceIHave)**
+- should be a method.
+- should have 1 arguments.
+- the argument name should be mentioned as priceIHave.
+- should calculate the remaining amount the customer has.
+- if the calculated price is less than or equal to zero, return ```Customer has no more amount```.
+- else return the remaining amount after buying the android phone.
+```
+return 'Customer has remaining Rs.'+this.price +' after buying the Iphone';
+```
+- else if the amount is less than the Iphone price, then return
+```
+return "Customer can't able to buy a phone due to insufficient amount";
+```
+
+### Progression 4:  MOBILE CAMPUS
+Create a class called Mobile Campus and a method to it:  changeMobileAvailabilityNumber(count,type)
+
+**class**
+- should receive three arguments NoOfMobiles, NoOfAndroidMobiles, NoOfIPhoneMobiles.
+- should have NoOfMobiles as first argument.
+- should have NoOfAndroidMobiles as second argument.
+- should have NoOfIPhoneMobiles as third argument.
+
+**changeMobileAvailabilityNumber(count,type)**
+- should be a method.
+- should have 2 arguments.
+- the first argument name should be count.
+- the second argument name should be type.
+- based on the type of mobile phone calculate the availability of Android Phone and IPhone and return the count.
+```
+     if(type === 'android'){
+            this.NoOfAndroidMobiles = this.NoOfAndroidMobiles - count;
+            return 'Available android mobiles are '+this.NoOfAndroidMobiles;
+
+        }
+        if(type === 'iphone'){
+            this.NoOfIPhoneMobiles = this.NoOfIPhoneMobiles - count;
+            return 'Available iphone mobiles are '+this.NoOfIPhoneMobiles;
+        }
+```
 
 
 Happy Coding ProGrads❤️
