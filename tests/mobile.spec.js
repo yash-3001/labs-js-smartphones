@@ -205,9 +205,9 @@ describe('IPhone', () => {
       expect(iphone.price).toEqual(65500 - price );
     });
 
-    it('should return "Customer has remaining Rs.AMOUNT after buying the iphone", if customer has more amount than actual price of the phone', () => {
-      expect(iphone.remainingAmount(65500)).toEqual(`Customer has remaining Rs.${iphone.price} after buying the android phone`);
-      expect(iphone.remainingAmount(65000)).toEqual(`Customer has remaining Rs.${iphone.price} after buying the android phone`);
+    it('should return "Customer has remaining Rs.AMOUNT after buying an iphone", if customer has more amount than actual price of the phone', () => {
+      expect(iphone.remainingAmount(65500)).toEqual(`Customer has remaining Rs.${iphone.price} after buying an iphone`);
+      expect(iphone.remainingAmount(65000)).toEqual(`Customer has remaining Rs.${iphone.price} after buying an iphone`);
     });
     
     it('should return "Customer has no more amount", if customer has equal amount as same as actual price of the phone', () => {
